@@ -1,0 +1,32 @@
+#loginContent {
+	display: inline-block;
+    background: #E7E6E8;
+    float: left;
+    width: 100%;
+    height: calc(100% - 100px);
+	 background-image: url("img/bg1.jpg");
+}
+.loginBox{
+margin-left: 537px;
+margin-top: 188px;
+}
+.myLoginButton {
+background-color:#ADAAAA;
+-moz-border-radius:28px;
+-webkit-border-radius:28px;
+border-radius:28px;
+border:1px solid #18ab29;
+display:inline-block;
+cursor:pointer;	
+color:#ffffff;
+font-family:arial;
+font-size:15px;
+padding:18px 70px;
+text-decoration:none;
+text-shadow:0px 1px 0px #2f6627;
+}.myButton:hover {
+	background-color:#FF7066;
+}.myButton:active {
+	position:relative;
+	top:1px;
+}

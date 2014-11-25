@@ -1,0 +1,139 @@
+<html>
+<head>
+<link href="Contents/Feeds.css" rel="stylesheet" ></link>
+<link href="Contents/Profile.css" rel="stylesheet" ></link>
+<link href="Contents/Login.css" rel="stylesheet" ></link>
+
+</head>
+
+<body>
+
+<!-- Below HTML for DIV Page -->
+<div id="FeedsAndProfile" style="display: none;">
+	<div id="header"><h1>My Book</h1>
+	</div>
+
+	<div id="leftcolumn">
+	<table class="menu">
+		<tr>
+			<td style="align: center;">
+				<a href="javascript:showPage(1);" >Feed</a>
+			</td>
+		</tr>
+		<tr>
+			<td style="align: center;"l>
+				<a href="javascript:showPage(2);" >Profile</a>
+		</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id="content">
+		<div id="feedPage">
+		<div id="inputFeeds" style="margin-left: 200px;margin-top: 50px;margin-bottom: 30px;">
+		<input id="FeedData" type="text" class="myfeed" Placeholder="Make your post" />
+		<a href="javascript:setFeed(document.getElementById('FeedData').value)" class="myButton"  >Post</a>
+		</div>
+		<div id="showAllFeeds" class="feedContainer">
+			 <!-- <div class="myfeedshow"><div style="display:block;padding-left:580px;"><a href="#">x</a></div><div class="myinnerfeed"><span>feed 1</span></div><div style="display:block;padding-left:450px;">Nov 12, 2014 3:53PM</div></div> -->
+		</div>
+	</div>
+		
+<!-- Profile Page Start Here -->		
+		<div id="profilePage" style="display: none;">
+			<div class="formContainer" >
+			
+				<table border="0">
+				<tr>
+					<td><input Id="Name" type="text" placeholder="Name" /> </td>
+				</tr>
+				
+				<tr>
+					<td><input Id="Age" type="text" placeholder="Age" /> </td>
+				</tr>
+				
+				<tr>
+					<td><input Id="Phone" type="text" placeholder="Phone" /> </td>
+				</tr>
+
+				<tr>
+					<td><input Id="Email" type="text" placeholder="Email" /> </td>
+				</tr>
+
+				<tr>
+					<td><textarea Id="Address" placeholder="Address" style="width: 173px;" ></textarea> </td>
+				</tr>				
+			
+				<tr>
+					<td><input Id="file" type="file" onchange="previewFile()" /> </td>
+				</tr>
+				
+				<tr>
+					<td><input Id="btnSubmit" onclick="saveProfile();" type="button" value="submit" /> </td>
+				</tr>			
+			</table>
+				<div style="display:inline;">
+				<img id="myimage" src="" height="150px" width="150px" alt="Image Preview" ></img>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- Profile Page Ends Here -->
+
+	<div id="footer" class="footer-text">
+	Talent improving exercise, OFS
+	</div>
+
+
+</div>
+
+<!-- Below HTML for Login Page -->
+<div Id="LoginPage">
+	<div id="header"><h1>My Book</h1></div>
+	<div id="loginContent">
+	
+		<div class="loginBox">
+			<table>
+				<tr>
+					<td>
+					<input Type="text" id="userName" placeholder="UserName" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+					<input Type="text" id="password" placeholder="Password" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+					<a href="javascript:AuthenticateUsers();" class="myLoginButton" >Login</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+					<span id="lblError"><span>
+					</td>
+				</tr>
+				
+			</table>
+
+	</div>
+</div>
+<div id="footer" class="footer-text">
+Talent improving exercise, OFS
+	</div>
+</div>
+
+</body>
+
+</div>
+
+<script language="JavaScript" src="Scripts/Feeds.js" ></script>
+<script language="JavaScript" src="Scripts/Profile.js" ></script>
+<script language="JavaScript" src="Scripts/Login.js" ></script>
+
+<html>
