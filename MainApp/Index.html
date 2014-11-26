@@ -8,9 +8,11 @@
 
 <body>
 
-<!-- Below HTML for DIV Page -->
+<!-- Below HTML for Feed and Profile Page -->
 <div id="FeedsAndProfile" style="display: none;">
-	<div id="header"><h1>My Book</h1>
+	<div id="header" >
+	<div><h1>My Book</h1></div>
+	<div class="SignOut"> <a href="javascript:signOut();" >Sign Out</a></div>
 	</div>
 
 	<div id="leftcolumn">
@@ -27,7 +29,7 @@
 		</tr>
 		</table>
 	</div>
-
+<!-- Feed Page Start Here -->	
 	<div id="content">
 		<div id="feedPage">
 		<div id="inputFeeds" style="margin-left: 200px;margin-top: 50px;margin-bottom: 30px;">
@@ -38,39 +40,45 @@
 			 <!-- <div class="myfeedshow"><div style="display:block;padding-left:580px;"><a href="#">x</a></div><div class="myinnerfeed"><span>feed 1</span></div><div style="display:block;padding-left:450px;">Nov 12, 2014 3:53PM</div></div> -->
 		</div>
 	</div>
+
+	<!-- Feed Page Ends Here -->		
 		
 <!-- Profile Page Start Here -->		
-		<div id="profilePage" style="display: none;">
-			<div class="formContainer" >
+	<div id="profilePage" style="display: none;">
+		<div class="formContainer" >
 			
 				<table border="0">
 				<tr>
-					<td><input Id="Name" type="text" placeholder="Name" /> </td>
+				<td style="color: red;">*</td>	<td><input Id="Name" type="text" placeholder="Name" /> </td>
 				</tr>
 				
 				<tr>
-					<td><input Id="Age" type="text" placeholder="Age" /> </td>
+					<td style="color: red;">*</td><td><input Id="Age" type="text" placeholder="Age" /> </td>
 				</tr>
 				
 				<tr>
-					<td><input Id="Phone" type="text" placeholder="Phone" /> </td>
+					<td style="color: red;">*</td><td><input Id="Phone" type="text" placeholder="Phone" /> </td>
 				</tr>
 
 				<tr>
-					<td><input Id="Email" type="text" placeholder="Email" /> </td>
+					<td style="color: red;">*</td><td><input Id="Email" type="text" placeholder="Email" /> </td>
 				</tr>
 
 				<tr>
-					<td><textarea Id="Address" placeholder="Address" style="width: 173px;" ></textarea> </td>
+					<td></td><td><textarea Id="Address" placeholder="Address" style="width: 173px;" ></textarea> </td>
 				</tr>				
 			
 				<tr>
-					<td><input Id="file" type="file" onchange="previewFile()" /> </td>
+					<td></td><td><input Id="file" type="file" onchange="previewFile()" /> </td>
 				</tr>
 				
 				<tr>
-					<td><input Id="btnSubmit" onclick="saveProfile();" type="button" value="submit" /> </td>
-				</tr>			
+					<td></td><td><input Id="btnSubmit" onclick="saveProfile();" type="button" value="submit" /> </td>
+				</tr>	
+				<tr>
+					<td colspan="2"><span id="lblValidation" style="color: red;"></span></td>
+				</tr>
+				
 			</table>
 				<div style="display:inline;">
 				<img id="myimage" src="" height="150px" width="150px" alt="Image Preview" ></img>
@@ -78,13 +86,12 @@
 			</div>
 		</div>
 	</div>
-	
+		
 <!-- Profile Page Ends Here -->
 
 	<div id="footer" class="footer-text">
 	Talent improving exercise, OFS
 	</div>
-
 
 </div>
 
@@ -103,7 +110,7 @@
 
 				<tr>
 					<td>
-					<input Type="text" id="password" placeholder="Password" />
+					<input Type="password" id="password" placeholder="Password" />
 					</td>
 				</tr>
 
@@ -115,7 +122,7 @@
 
 				<tr>
 					<td>
-					<span id="lblError"><span>
+						<span id="lblError" style="color: red;"><span>
 					</td>
 				</tr>
 				
